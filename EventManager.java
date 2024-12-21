@@ -1,5 +1,3 @@
-package ProjectOOP;
-
 public class EventManager {
 
     private String name;
