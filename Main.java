@@ -1,8 +1,6 @@
-package ProjectOOP;
-
 public class Main {
 
-    public static void main(String[] args){
+    public static void Main(String[] args){
 
         Participant part1 = new Participant("Dosymzhan", "Sheri");
         Participant part2 = new Participant("Turganber", "Nurkhan");
