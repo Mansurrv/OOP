@@ -1,5 +1,3 @@
-package ProjectOOP;
-
 public class Participant {
 
     public String name;
