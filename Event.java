@@ -1,5 +1,3 @@
-package ProjectOOP;
-
 public class Event {
 
     private int hour;
