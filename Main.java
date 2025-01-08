@@ -1,23 +1,33 @@
+package ProjectOOP;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Main {
 
-    public static void Main(String[] args){
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        ArrayList<Participant> participants = new ArrayList<>();
 
-        Scanner scan = new Scanner(System.in);
-        int count = scan.nextInt();
-        for(int i=0; i<=count; i++){
-            System.out.println("Enter your name,surname: ");
-            Scanner scan2 = new Scanner(System.in);
-            String name = scan2.nextLine();
+        System.out.println("Enter the number of participants: ");
+        int count = scanner.nextInt();
+        scanner.nextLine(); // Consume newline
+
+        for (int i = 0; i < count; i++) {
+            System.out.println("Enter your name: ");
+            String name = scanner.nextLine();
             System.out.println("Enter your surname: ");
-            Scanner scan3 = new Scanner(System.in);
-            String surname = scan3.nextLine();
-            Participant part1 = new Participant(name, surname);
+            String surname = scanner.nextLine();
+            Participant participant = new Participant(name, surname);
+            participants.add(participant);
         }
 
-        Event date1 = new Event(12,45,9);
+        Event event = new Event(12, 45, 9);
+        EventManager eventManager = new EventManager("Serikbai Mansur");
 
-        EventManager name1 = new EventManager("Serikbai Mansur");
-
+        System.out.println("Event details: " + event);
+        System.out.println(eventManager);
+        System.out.println("Participants: ");
+        participants.forEach(System.out::println);
     }
-
 }
