@@ -1,18 +1,38 @@
+package ProjectOOP;
+
+import java.util.Objects;
+
 public class EventManager {
 
     private String name;
 
-    public EventManager(String name){
-        setName(name);
-        System.out.println(getName());
+    public EventManager(String name) {
+        this.name = name;
     }
 
-    public void setName(String _name){
-        name = _name;
+    public String getName() {
+        return name;
     }
 
-    public String getName(){
-        String res3 = "Name eventManager is: "+name;
-        return res3;
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Event Manager name is " + name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        EventManager that = (EventManager) o;
+        return Objects.equals(name, that.name);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(name);
     }
 }
